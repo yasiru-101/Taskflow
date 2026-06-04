@@ -1,0 +1,66 @@
+/**
+ * @file constants.js
+ * @description Application configuration tokens (enums, socket urls, rules, intervals).
+ */
+// ─── Role Constants ──────────────────────────────────────────────────────────
+export const ROLES = {
+  ADMIN: 'Admin',
+  PROJECT_MANAGER: 'Project Manager',
+  COLLABORATOR: 'Collaborator',
+};
+
+// ─── Task Status Constants ────────────────────────────────────────────────────
+export const TASK_STATUS = {
+  TODO: 'To Do',
+  IN_PROGRESS: 'In Progress',
+  COMPLETED: 'Completed',
+};
+
+export const TASK_STATUS_LIST = [
+  TASK_STATUS.TODO,
+  TASK_STATUS.IN_PROGRESS,
+  TASK_STATUS.COMPLETED,
+];
+
+// ─── Task Priority Constants ──────────────────────────────────────────────────
+export const TASK_PRIORITY = {
+  LOW: 'Low',
+  MEDIUM: 'Medium',
+  HIGH: 'High',
+};
+
+export const TASK_PRIORITY_LIST = [
+  TASK_PRIORITY.LOW,
+  TASK_PRIORITY.MEDIUM,
+  TASK_PRIORITY.HIGH,
+];
+
+// ─── Notification Types ───────────────────────────────────────────────────────
+export const NOTIFICATION_TYPE = {
+  ASSIGNMENT: 'Assignment',
+  STATUS_CHANGE: 'StatusChange',
+  COMMENT: 'Comment',
+  DEADLINE: 'Deadline',
+  ADMIN: 'Admin',
+};
+
+// ─── API Base URL ─────────────────────────────────────────────────────────────
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+// ─── Socket URL ───────────────────────────────────────────────────────────────
+export const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
+
+// ─── Password Policy ──────────────────────────────────────────────────────────
+export const PASSWORD_POLICY = {
+  MIN_LENGTH: 8,
+  REGEX: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/,
+  HINT: 'Min 8 chars, uppercase, lowercase, number, and special character (!@#$%^&*)',
+};
+
+// ─── Toast Durations (ms) ─────────────────────────────────────────────────────
+export const TOAST_DURATION = {
+  SUCCESS: 3500,
+  ERROR: 5000,
+  WARNING: 4000,
+  INFO: 3000,
+};
